@@ -38,7 +38,7 @@ jobs:
         deploy:
           provider: pages
           skip-cleanup: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_PAT }}
           keep-history: true
           local-dir: .
           target-branch: gh-pages
