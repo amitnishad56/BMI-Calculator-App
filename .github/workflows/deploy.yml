@@ -16,16 +16,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: |
+        run: 
           npm install
         env:
           CI: true
 
       - name: Build and deploy
-        run: |
+        run: 
           npm run build
-          git config --global user.name amitnishad
-          git config --global user.email amitnishad07052000@gmail.com
           git checkout --orphan gh-pages
           mv build/* .
           rm -r build
